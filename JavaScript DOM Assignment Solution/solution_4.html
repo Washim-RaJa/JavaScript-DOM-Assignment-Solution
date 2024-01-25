@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            width: 260px;
+            margin: 0 auto;
+        }
+        #user-email{
+            margin: 20px 0;
+        }
+        input[type='submit']{
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up Form</h1>
+
+    <form id="form">
+
+        <label for="user-name">Name :</label>
+
+        <input type="text" name="username" id="user-name" placeholder="(Minimum 3 characters)">
+
+        <label for="user-email">Email :</label>
+
+        <input type="email" name="useremail" id="user-email" placeholder="Enter Your Email"/>
+
+        <label for="user-password">Password :</label>
+
+        <input type="password" name="password" id="user-password" placeholder="(Minimum 8 characters)">
+
+        <input type="submit">
+
+    </form>
+
+    <script>
+        const form = document.getElementById('form');
+
+        const inputName = document.getElementById('user-name');
+
+        const inputEmail = document.getElementById('user-email');
+
+        const inputPW = document.getElementById('user-password');
+
+        
+        form.addEventListener("submit",()=>{
+
+            let nameLength = inputName.value.length;
+
+            let pwLength = inputPW.value.length;
+
+            if(nameLength>2){
+
+                if(pwLength>7){
+                    alert('Form Validation Successful !!');
+                }
+                else{
+                alert('Form Validation Failed');
+
+                }
+
+            }
+            else{
+                alert('Form Validation Failed !!');
+            }
+
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>

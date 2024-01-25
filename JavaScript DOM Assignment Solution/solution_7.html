@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-7</title>
+</head>
+<body>
+
+    <input type="text" name="userinput" id="user-input"  placeholder="Search for items"/>
+
+    <h3>Results:</h3>
+    
+    <ul id="item-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind CSS</li>
+            <li>GitHub</li>
+            <li>JavaScript</li>
+    </ul>
+
+    <script>
+        const userInput = document.getElementById('user-input');
+
+        const itemList = document.getElementById('item-list')
+                                 .querySelectorAll('li'); 
+
+        userInput.addEventListener('input',function (){
+
+            let inputValue = userInput.value.toLowerCase();
+
+            for(let i=0;i<itemList.length;i++){
+
+                const y = itemList[i].innerText.toLowerCase();
+
+                if(y.includes(inputValue)){
+
+                    itemList[i].style.display = 'block';
+                }
+                else{
+
+                    itemList[i].style.display = 'none';
+                }
+            }
+           
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+    <style>
+        .imgDisplay{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Your Image is visible.</h1>
+
+    <button id="btn">Toggle Image</button>
+
+    <br/><br/>
+
+    <img src="FSWD.png" id="pic">
+
+    <script>
+        const title = document.getElementById('heading');
+
+        const button = document.getElementById('btn');
+
+        const image = document.getElementById('pic');
+
+
+        button.addEventListener('click',()=>{
+
+            image.classList.toggle('imgDisplay');
+
+            const initialText = 'Your Image is visible.';
+
+            if(title.innerText.toLowerCase().includes(initialText.toLowerCase())){
+
+                title.innerText = 'Your Image is hidden.';
+            }
+            else{
+                title.innerHTML = initialText;
+            }
+        })
+
+    </script>
+</body>
+</html>

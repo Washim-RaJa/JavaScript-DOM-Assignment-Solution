@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6</title>
+</head>
+<body>
+    <script>
+        const body = document.body;
+
+        const heading = document.createElement('h2');
+
+        heading.innerText = 'Which is favourite Programming Language : ';
+
+        const dropDown = document.createElement('select');
+
+        const options = ['JavaScript','Java','Python','C++']
+        
+
+        for(let data of options){
+            
+            const option = document.createElement('option');
+            
+            option.innerText = data;
+            
+            option.value = data;
+            
+            dropDown.appendChild(option);
+        }
+
+        body.appendChild(heading);
+
+        heading.appendChild(dropDown);
+
+    </script>
+</body>
+</html>

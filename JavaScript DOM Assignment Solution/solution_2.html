@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <style>
+        .darkMode{
+            background-color: black;
+        }
+        .textColor{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">This is Light Mode</h1>
+    <button id="btn">Toggle Theme</button>
+
+    <script>
+        const title = document.getElementById('heading');
+        const button = document.getElementById('btn');
+
+        button.addEventListener('click',function themeChanger(){
+
+            document.body.classList.toggle('darkMode');
+
+            title.classList.toggle('textColor');
+
+            const initialText = "This is Light Mode";
+
+            if(title.innerText.toLowerCase().includes(initialText.toLowerCase())){
+
+                title.innerText = "This is Dark Mode";
+            }
+            else{
+                title.innerText = initialText;
+            }
+        })
+    </script>
+</body>
+</html>

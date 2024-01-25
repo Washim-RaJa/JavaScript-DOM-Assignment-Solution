@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+</head>
+<body>
+    <h1>Update Profile Picture</h1>
+    
+    <input id="inputPic" type="file" accept="image/*">
+    
+    <h2>Your Profile Picture</h2>
+    
+    <img id="prevPic" src="" alt="No Profile Picture"/>
+
+    <script>
+        const userInput = document.getElementById('inputPic');
+
+        const result = document.getElementById('prevPic');
+
+        userInput.addEventListener('input',(event)=>{
+
+            let filename = event.target.value;
+
+            let inputValue = filename.replace('C:\\fakepath\\','');
+
+            result.src = inputValue;
+
+        })
+
+        // The image file should be in the same directory as the index file
+    </script>
+</body>
+</html>

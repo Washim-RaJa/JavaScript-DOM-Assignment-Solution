@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8</title>
+    <style>
+        body{
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            border: 3px solid white;
+            border-radius: 7px;
+            font-size: 40px;
+            padding: 13px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <span id="hours">00</span> : <span id="minutes">00</span> : <span id="seconds">00</span>
+    </div>
+    <script>
+        function timer(){
+            const time = new Date();
+
+            const hours = time.getHours().toString().padStart('2',0);
+
+            const minutes = time.getMinutes().toString().padStart('2',0);
+
+            const seconds = time.getSeconds().toString().padStart('2',0);
+            
+            document.getElementById('hours').innerText = hours;
+
+            document.getElementById('minutes').innerText = minutes;
+
+            document.getElementById('seconds').innerText = seconds;
+
+            const colorCode = `#${hours}${minutes}${seconds}`
+
+            document.body.style.backgroundColor = colorCode;
+        }
+
+        setInterval(timer,1000);
+    </script>
+</body>
+</html>

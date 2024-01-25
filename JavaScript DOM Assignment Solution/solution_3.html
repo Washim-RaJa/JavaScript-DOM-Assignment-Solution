@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <style>
+        #result{
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+
+    <button onclick="increment()">+</button>
+
+    <span id="result">0</span>
+
+    <button onclick="decrement()">-</button>
+
+
+    <script>
+        const counter = document.getElementById('result');
+
+        function increment(){
+
+            counter.innerText = Number(counter.innerText)+1;
+        }
+        function decrement(){
+
+            if(Number(counter.innerText)>0){
+                
+                counter.innerText = Number(counter.innerText)-1;
+            }
+            else{
+                alert('Counter is going beyond 0');
+            }
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-9</title>
+</head>
+<body>
+    <button id="login">Login</button>
+    <button id="logout">Logout</button>
+    <h2 id="heading"></h2>
+
+    <script>
+        const logIn = document.getElementById('login');
+
+        const logOut = document.getElementById('logout');
+
+        const heading = document.getElementById('heading');
+
+
+        logIn.addEventListener('click',()=>{
+
+            localStorage.setItem('isUserLoggedIn',true)
+
+            heading.innerText = 'User is Logged In';
+        })
+
+        logOut.addEventListener('click',()=>{
+            
+            localStorage.removeItem('isUserLoggedIn')
+            
+            heading.innerText = 'User Has Not Logged In';
+        })
+    </script>
+</body>
+</html>
